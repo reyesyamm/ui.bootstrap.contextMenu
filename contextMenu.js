@@ -90,10 +90,12 @@
                 };
 
                 if (leftOriented) {
-                  $arrow = '&lt;';
+                  // $arrow = '&lt;';
+                  $arrow = '<i class="fa fa-angle-left"></i>';
                   $boldStyle.float = 'left';
                 } else {
-                  $arrow = '&gt;';
+                  // $arrow = '&gt;';
+                  $arrow = '<i class="fa fa-angle-right"></i>';
                   $boldStyle.float = 'right';
                 }
 
@@ -404,7 +406,7 @@
 
             var leftCoordinate = event.pageX;
             var menuWidth = angular.element($ul[0]).prop('offsetWidth');
-            var winWidth = event.view.innerWidth + window.pageXOffset;
+            var winWidth = event.view.innerWidth;
             var padding = 5;
 
             if (leftOriented) {
